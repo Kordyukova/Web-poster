@@ -1,0 +1,153 @@
+@import "reset.css";
+/*STARS START*/
+@-webkit-keyframes stars {
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(0vmin, 0vmin, 1000vmin) scale(5);
+    opacity: 0;
+  }
+}
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  perspective: 200vmin;
+  perspective-origin: 50% 50%;
+  background: #000;
+  overflow: hidden;
+}
+body span {
+  width: .5vmin;
+  height: .5vmin;
+  position: absolute;
+  top: 50vh;
+  left: 50vw;
+  transform: translate3d(0vmin, 0vmin, -5000vmin) scale(5);
+  opacity: 0;
+}
+body span:nth-of-type(1) {
+  box-shadow: -45vmin 27vmin 0 #fff , 39vmin -5vmin 0 #fff , -39vmin -6vmin 0 #fff , -35vmin -30vmin 0 #fff , 31vmin 14vmin 0 #fff;
+  animation: stars 10s infinite linear;
+}
+body span:nth-of-type(2) {
+  animation: stars 9s infinite linear 1s;
+  box-shadow: 39vmin -40vmin 0 #fff , 30vmin -40vmin 0 #fff , -32vmin -33vmin 0 #fff , 49vmin -23vmin 0 #fff , -41vmin -20vmin 0 #fff , 34vmin -11vmin 0 #fff , -42vmin 10vmin 0 #fff;
+}
+body span:nth-of-type(3) {
+  animation: stars 8s infinite linear 2s;
+  box-shadow: -42vmin 5vmin 0 #fff , 16vmin -14vmin 0 #fff , 47vmin -41vmin 0 #fff , 17vmin 8vmin 0 #fff , 10vmin -15vmin 0 #fff , -46vmin -16vmin 0 #fff , 4vmin -21vmin 0 #fff , -20vmin 37vmin 0 #fff , -39vmin 32vmin 0 #fff , -7vmin 33vmin 0 #fff;
+}
+body span:nth-of-type(4) {
+  animation: stars 7s infinite linear 3s;
+  box-shadow: -45vmin 27vmin 0 #fff , 39vmin -5vmin 0 #fff , -39vmin -6vmin 0 #fff , -35vmin -30vmin 0 #fff , 31vmin 14vmin 0 #fff;
+}
+body span:nth-of-type(5) {
+  animation: stars 6s infinite linear 4s;
+  box-shadow: 39vmin -40vmin 0 #fff , 30vmin -40vmin 0 #fff , -32vmin -33vmin 0 #fff , 49vmin -23vmin 0 #fff , -41vmin -20vmin 0 #fff , 34vmin -11vmin 0 #fff , -42vmin 10vmin 0 #fff;
+}
+body span:nth-of-type(6) {
+  animation: stars 5s infinite linear 5s;
+  box-shadow: -42vmin 5vmin 0 #fff , 16vmin -14vmin 0 #fff , 47vmin -41vmin 0 #fff , 17vmin 8vmin 0 #fff , 10vmin -15vmin 0 #fff , -46vmin -16vmin 0 #fff , 4vmin -21vmin 0 #fff , -20vmin 37vmin 0 #fff , -39vmin 32vmin 0 #fff , -7vmin 33vmin 0 #fff;
+}
+body span:nth-of-type(7) {
+  animation: stars 4s infinite linear 6s;
+  box-shadow: -45vmin 27vmin 0 #fff , 39vmin -5vmin 0 #fff , -39vmin -6vmin 0 #fff , -35vmin -30vmin 0 #fff , 31vmin 14vmin 0 #fff;
+}
+body span:nth-of-type(8) {
+  animation: stars 3s infinite linear 7s;
+  box-shadow: -42vmin 5vmin 0 #fff , 16vmin -14vmin 0 #fff , 47vmin -41vmin 0 #fff , 17vmin 8vmin 0 #fff , 10vmin -15vmin 0 #fff , -46vmin -16vmin 0 #fff , 4vmin -21vmin 0 #fff , -20vmin 37vmin 0 #fff , -39vmin 32vmin 0 #fff , -7vmin 33vmin 0 #fff;
+}
+body span:nth-of-type(9) {
+  animation: stars 2s infinite linear 8s;
+  box-shadow: 39vmin -40vmin 0 #fff , 30vmin -40vmin 0 #fff , -32vmin -33vmin 0 #fff , 49vmin -23vmin 0 #fff , -41vmin -20vmin 0 #fff , 34vmin -11vmin 0 #fff , -42vmin 10vmin 0 #fff;
+}
+body span:nth-of-type(10) {
+  animation: stars 1s infinite linear 9s;
+  box-shadow: -45vmin 27vmin 0 #fff , 39vmin -5vmin 0 #fff , -39vmin -6vmin 0 #fff , -35vmin -30vmin 0 #fff , 31vmin 14vmin 0 #fff;
+}
+/*STARS END*/
+
+/*CAROUSEL START*/
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+body {
+  background: #000;
+}
+.container {
+  position: absolute;
+  top: 150px;
+  left: 0;
+  width: 100%;
+  height: 400px;
+  perspective: 2500px;
+}
+.carousel {
+  position: absolute;
+  top: 100px;
+  width: 100%;
+  height: 200px;
+  transform-style: preserve-3d;
+  animation: rotation 20s infinite linear;
+}
+.carousel:hover {
+  animation-play-state: paused;
+}
+.carousel img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 250px;
+}
+.carousel img:nth-child(1) {
+  transform: rotateY(0deg) translateZ(420px);
+}
+.carousel img:nth-child(2) {
+  transform: rotateY(45deg) translateZ(420px);
+}
+.carousel img:nth-child(3) {
+  transform: rotateY(90deg) translateZ(420px);
+}
+.carousel img:nth-child(4) {
+  transform: rotateY(135deg) translateZ(420px);
+}
+.carousel img:nth-child(5) {
+  transform: rotateY(180deg) translateZ(420px);
+}
+.carousel img:nth-child(6) {
+  transform: rotateY(225deg) translateZ(420px);
+}
+.carousel img:nth-child(7) {
+  transform: rotateY(270deg) translateZ(420px);
+}
+.carousel img:nth-child(8) {
+  transform: rotateY(315deg) translateZ(420px);
+}
+@keyframes rotation {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+@media (min-width: 300px) and (max-width: 399px) {
+  .container {
+    align-items: center;
+  }
+  
+
+}
+
+/*CAROUSEL END*/
